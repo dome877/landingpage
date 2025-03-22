@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* Minimalistic styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,37 +7,17 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-color: #f8f9fa;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #333;
-    line-height: 1.6;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 800px;
     width: 90%;
-    padding: 2rem;
-}
-
-/* Header section */
-.header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: #2c3e50;
-}
-
-.header p {
-    font-size: 1.2rem;
-    color: #5d6d7e;
-    font-weight: 300;
 }
 
 /* Card container and cards */
@@ -46,58 +26,41 @@ body {
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
-    margin-bottom: 3rem;
 }
 
 .card {
     background-color: white;
-    border-radius: 12px;
-    overflow: hidden;
-    width: 300px;
+    border-radius: 8px;
+    width: 280px;
     text-decoration: none;
-    color: inherit;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
 }
 
 .card-content {
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
 }
 
 .card-icon {
-    font-size: 3rem;
     margin-bottom: 1rem;
+    color: #555;
 }
 
 .card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #2c3e50;
-}
-
-.card p {
-    color: #7f8c8d;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    color: #7f8c8d;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
-    .header h1 {
-        font-size: 2rem;
-    }
-    
+@media (max-width: 600px) {
     .card-container {
         flex-direction: column;
         align-items: center;
@@ -105,6 +68,7 @@ footer {
     
     .card {
         width: 100%;
-        max-width: 350px;
+        max-width: 300px;
+        margin-bottom: 1rem;
     }
 } 
